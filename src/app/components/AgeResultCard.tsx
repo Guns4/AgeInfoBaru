@@ -151,25 +151,27 @@ export default function AgeResultCard({
           className="md:col-span-8 relative group"
         >
           <div className="absolute -inset-0.5 bg-gradient-to-r from-violet-600 to-blue-600 rounded-3xl blur opacity-25 group-hover:opacity-40 transition duration-1000 group-hover:duration-200"></div>
-          <Card className="relative p-8 md:p-12 bg-white/80 backdrop-blur-xl border-white/20 h-full flex flex-col justify-center overflow-hidden rounded-3xl">
-            <div className="absolute top-0 right-0 -transtale-y-1/2 translate-x-1/2 w-64 h-64 bg-violet-100 rounded-full blur-3xl opacity-50"></div>
+          <Card className="relative p-8 md:p-12 bg-white/90 backdrop-blur-2xl border-white/40 h-full flex flex-col justify-center overflow-hidden rounded-3xl shadow-xl shadow-violet-500/5">
+            <div className="absolute top-0 right-0 -transtale-y-1/2 translate-x-1/2 w-64 h-64 bg-violet-100/30 rounded-full blur-3xl opacity-50"></div>
 
             <div className="relative z-10">
-              <div className="inline-flex items-center gap-2 px-4 py-2 bg-violet-600 text-white rounded-2xl mb-6 shadow-lg shadow-violet-500/30">
-                <Crown className="w-4 h-4" />
-                <span className="text-sm font-bold tracking-wide uppercase">Usia Hari Ini</span>
+              <div className="inline-flex items-center gap-2 px-5 py-2.5 bg-violet-600 text-white rounded-2xl mb-8 shadow-lg shadow-violet-500/30">
+                <Crown className="size-4" />
+                <span className="text-xs font-black tracking-[0.2em] uppercase">Usia Hari Ini</span>
               </div>
 
-              <h2 className="text-4xl md:text-7xl font-black text-slate-900 leading-tight mb-4">
-                <span className="block">{ageData.years} <span className="text-2xl md:text-4xl font-bold text-slate-400">Tahun</span></span>
-                <span className="block bg-gradient-to-r from-violet-600 to-blue-600 bg-clip-text text-transparent">
+              <h2 className="text-5xl md:text-8xl font-black text-black leading-none mb-6 tracking-tighter">
+                <span className="block">{ageData.years} <span className="text-2xl md:text-4xl font-bold text-slate-400 align-middle ml-2">Tahun</span></span>
+                <span className="block bg-gradient-to-r from-violet-600 to-blue-600 bg-clip-text text-transparent mt-2">
                   {ageData.months} Bulan {ageData.days} Hari
                 </span>
               </h2>
 
-              <p className="text-slate-500 text-lg flex items-center gap-2">
-                <Calendar className="w-5 h-5" />
-                Lahir pada era <span className="font-bold text-slate-900">{historical.era}</span>
+              <p className="text-slate-600 text-lg flex items-center gap-3 font-medium">
+                <div className="size-10 rounded-xl bg-slate-100 flex items-center justify-center text-slate-500">
+                  <Calendar className="size-5" />
+                </div>
+                Lahir pada era <span className="font-black text-black ml-1 text-xl">{historical.era}</span>
               </p>
             </div>
           </Card>
@@ -297,8 +299,8 @@ export default function AgeResultCard({
                 <div
                   key={index}
                   className={`relative p-5 rounded-2xl border-2 transition-all group ${milestone.achieved
-                      ? 'bg-emerald-50/50 border-emerald-100 hover:border-emerald-200'
-                      : 'bg-slate-50 border-slate-100 hover:border-slate-200'
+                    ? 'bg-emerald-50/50 border-emerald-100 hover:border-emerald-200'
+                    : 'bg-slate-50 border-slate-100 hover:border-slate-200'
                     }`}
                 >
                   <div className="flex items-center justify-between">

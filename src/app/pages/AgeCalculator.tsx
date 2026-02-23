@@ -129,15 +129,15 @@ export default function AgeCalculator() {
             <form onSubmit={(e) => { e.preventDefault(); handleCalculate(); }} className="space-y-8">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-6">
                 {/* Name Input */}
-                <fieldset className="space-y-2">
+                <fieldset className="space-y-4">
                   <Label
                     htmlFor="userName"
-                    className="text-base font-semibold text-gray-800 flex items-center gap-2"
+                    className="text-base font-black text-slate-800 flex items-center gap-3 tracking-tight"
                   >
-                    <span className="w-8 h-8 rounded-lg bg-violet-100 flex items-center justify-center text-violet-600">
-                      <Calculator className="w-4 h-4" />
-                    </span>
-                    Siapa Nama Anda? (Opsional)
+                    <div className="w-10 h-10 rounded-xl bg-violet-100 flex items-center justify-center text-violet-600 shadow-sm border border-violet-200/50">
+                      <Calculator className="w-5 h-5" />
+                    </div>
+                    Siapa Nama Anda? <span className="text-slate-400 font-medium text-xs ml-auto">(Opsional)</span>
                   </Label>
                   <Input
                     id="userName"
@@ -145,20 +145,20 @@ export default function AgeCalculator() {
                     placeholder="Contoh: Budi Santoso"
                     value={userName}
                     onChange={(e) => setUserName(e.target.value)}
-                    className="h-12 border-gray-200 focus:border-violet-500 focus:ring-violet-500 rounded-xl"
+                    className="h-14 border-gray-200 focus:border-violet-500 focus:ring-violet-500 rounded-2xl text-lg px-6 shadow-sm transition-all"
                   />
                 </fieldset>
 
                 {/* Date Input */}
-                <fieldset className="space-y-2">
+                <fieldset className="space-y-4">
                   <Label
                     htmlFor="birthDate"
-                    className="text-base font-semibold text-gray-800 flex items-center gap-2"
+                    className="text-base font-black text-slate-800 flex items-center gap-3 tracking-tight"
                   >
-                    <span className="w-8 h-8 rounded-lg bg-blue-100 flex items-center justify-center text-blue-600">
-                      <Calendar className="w-4 h-4" />
-                    </span>
-                    Tanggal Lahir <span className="text-red-500">*</span>
+                    <div className="w-10 h-10 rounded-xl bg-blue-100 flex items-center justify-center text-blue-600 shadow-sm border border-blue-200/50">
+                      <Calendar className="w-5 h-5" />
+                    </div>
+                    Tanggal Lahir <span className="text-red-500 ml-1">*</span>
                   </Label>
                   <Input
                     id="birthDate"
@@ -166,7 +166,7 @@ export default function AgeCalculator() {
                     value={birthDate}
                     onChange={(e) => setBirthDate(e.target.value)}
                     max={today}
-                    className="h-12 border-gray-200 focus:border-violet-500 focus:ring-violet-500 rounded-xl"
+                    className="h-14 border-gray-200 focus:border-violet-500 focus:ring-violet-500 rounded-2xl text-lg px-6 shadow-sm transition-all"
                     aria-required="true"
                     autoComplete="bday"
                   />

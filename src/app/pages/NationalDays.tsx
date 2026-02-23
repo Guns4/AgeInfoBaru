@@ -158,16 +158,18 @@ export default function NationalDays() {
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              className="text-center mb-12"
+              className="text-center mb-16"
             >
-              <div className="inline-flex items-center gap-2 px-5 py-2.5 bg-white/80 backdrop-blur-md rounded-full mb-6 border border-white shadow-sm">
-                <Globe className="w-4 h-4 text-blue-600 animate-spin-slow" />
-                <span className="text-sm font-black bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent uppercase tracking-widest">
-                  International Network
-                </span>
+              <div className="inline-flex items-center gap-3 px-6 py-3 bg-white/80 backdrop-blur-md rounded-full mb-8 border border-white shadow-sm">
+                <Globe className="w-5 h-5 text-blue-600 animate-spin-slow" />
+                <span className="text-sm font-black text-blue-700 uppercase tracking-widest">Global Insights</span>
               </div>
-              <h1 className="text-5xl md:text-7xl font-black text-slate-900 mb-6 tracking-tight">
-                Hari <span className="bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">Penting</span> Dunia
+              <h1 className="text-4xl md:text-6xl font-black mb-6 tracking-tighter">
+                Kalender{" "}
+                <span className="bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
+                  Hari Penting
+                </span>{" "}
+                Dunia
               </h1>
               <p className="text-xl text-slate-600 max-w-2xl mx-auto font-medium leading-relaxed">
                 Jadwal lengkap hari libur dan peringatan penting untuk berbagai negara besar di seluruh dunia.

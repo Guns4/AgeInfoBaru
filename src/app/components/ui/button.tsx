@@ -51,7 +51,8 @@ function Button({
   return (
     <Comp
       data-slot="button"
-      whileTap={{ scale: 0.96 }}
+      whileTap={{ scale: 0.95 }}
+      transition={{ type: "spring", stiffness: 400, damping: 10 }}
       className={cn(buttonVariants({ variant, size, className }))}
       {...props}
     />

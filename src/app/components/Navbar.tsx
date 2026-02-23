@@ -61,20 +61,20 @@ export default function Navbar() {
           >
             <motion.div
               whileHover={{ scale: 1.05 }}
-              transition={{ duration: 0.2 }}
+              transition={{ type: "spring", stiffness: 400, damping: 10 }}
               className="flex items-center"
             >
               <img
                 src="/src/app/assets/images/logo.png"
                 alt="AgeInfo Logo"
-                className="h-10 w-auto"
+                className="h-11 w-auto"
               />
             </motion.div>
             <div className="flex flex-col">
-              <span className="font-bold text-xl bg-gradient-to-r from-violet-600 to-blue-600 bg-clip-text text-transparent">
+              <span className="font-bold text-xl bg-gradient-to-r from-violet-600 to-blue-600 bg-clip-text text-transparent tracking-tighter">
                 AgeInfo
               </span>
-              <span className="text-[10px] text-gray-500 -mt-1 uppercase tracking-widest font-bold">
+              <span className="text-[10px] text-gray-500 -mt-1 uppercase tracking-[0.2em] font-black">
                 Platform Presisi
               </span>
             </div>
